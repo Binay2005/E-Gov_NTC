@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nepal Telecom | Register</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/app.js" defer></script>
+</head>
+<body>
+    <main class="auth-panel">
+        <section class="auth-card">
+            <p class="welcome-label">JOIN NEPAL TELECOM</p>
+            <h3>Create your account</h3>
+            <p class="subtext">Register to manage your services and complaints.</p>
+
+            <form id="registerForm" class="login-form">
+                <div class="field-group">
+                    <label for="fullname">Full name</label>
+                    <input
+                        id="fullname"
+                        name="fullname"
+                        type="text"
+                        placeholder="Enter your full name"
+                        required
+                    >
+                </div>
+
+                <div class="field-group">
+                    <label for="phone">Mobile number</label>
+                    <div class="input-with-prefix">
+                        <div class="country-code">
+                            <span>🇳🇵</span>
+                            <span>+977</span>
+                        </div>
+                        <input
+                            id="phone"
+                            name="phone"
+                            type="tel"
+                            placeholder="9XXXXXXXXX"
+                            pattern="9[0-9]{9}"
+                            maxlength="10"
+                            required
+                        >
+                    </div>
+                </div>
+
+                <div class="field-group">
+                    <label for="password">Password</label>
+                    <input
+                        id="password"
+                        name="password"
+                        type="password"
+                        minlength="6"
+                        placeholder="At least 6 characters"
+                        required
+                    >
+                </div>
+
+                <p class="form-message" role="status" aria-live="polite" hidden></p>
+
+                <button type="submit" class="submit-button">
+                    Create account
+                </button>
+            </form>
+
+            <p class="signup-link">
+                Already registered?
+                <a href="index.html">Log in</a>
+            </p>
+        </section>
+    </main>
+</body>
+</html>
