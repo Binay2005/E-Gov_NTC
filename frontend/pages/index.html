@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nepal Telecom | Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <aside class="brand-panel">
+        <div class="brand-header">
+          <div class="brand-mark">NT</div>
+          <div class="brand-copy">
+            <h1>Nepal Telecom</h1>
+            <span>नेपाली टेलिकम</span>
+          </div>
+        </div>
+
+        <div class="brand-content">
+          <div class="eyebrow">CONNECTED NEPAL</div>
+          <h2>Bringing people closer,<br />wherever you are.</h2>
+          <p>
+            Access your account, manage services, and stay connected with Nepal's
+            trusted telecommunication network.
+          </p>
+
+          <div class="stats">
+            <div class="stat">
+              <strong>20M+</strong>
+              <span>Customers connected</span>
+            </div>
+            <div class="stat">
+              <strong>77</strong>
+              <span>Districts covered</span>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <main class="auth-panel">
+        <div class="language-picker" aria-label="Language selector">
+          <span class="globe">◌</span>
+          <span>English</span>
+          <span class="caret">▾</span>
+        </div>
+
+        <section class="auth-card" aria-labelledby="login-title">
+          <p class="welcome-label">WELCOME BACK</p>
+          <h3 id="login-title">Log in to your account</h3>
+          <p class="subtext">Log in securely with your Nepal Telecom mobile number.</p>
+
+          <form class="login-form" novalidate>
+            <div class="field-group">
+              <label for="phone">Mobile number</label>
+              <div class="input-with-prefix">
+                <div class="country-code">
+                  <span class="flag">🇳🇵</span>
+                  <span>+977</span>
+                </div>
+                <input id="phone" name="phone" type="tel" placeholder="9XXXXXXXXX" />
+              </div>
+            </div>
+
+            <div class="field-row">
+              <label for="password">Password</label>
+              <a href="#" aria-label="Forgot password">Forgot password?</a>
+            </div>
+            <div class="password-wrap">
+              <input id="password" name="password" type="password" placeholder="Enter your password" />
+              <button type="button" class="toggle-password" aria-label="Show password" title="Show password">
+                <span class="eye-icon">◉</span>
+              </button>
+            </div>
+
+            <label class="remember-me">
+              <input type="checkbox" checked />
+              <span>Keep me signed in</span>
+            </label>
+
+            <p class="form-message" role="status" aria-live="polite" hidden></p>
+            <button type="submit" class="submit-button">Log in securely <span>→</span></button>
+          </form>
+
+          <p class="signup-link">
+            New to Nepal Telecom?
+            <a href="#">Create an account</a>
+          </p>
+        </section>
+
+        <button class="help-button" type="button" aria-label="Help">?</button>
+      </main>
+    </div>
+
+    <script src="../js/app.js"></script>
+  </body>
+</html>
