@@ -3,8 +3,8 @@ import { signup, login, logout } from "../controller/user.controller.js";
 
 const router = express.Router();
 
-// /api/auth/signup
-router.post("/signup", signup);
+// /api/auth/register
+router.post("/register", signup);
 
 router.post("/login", login);
 
