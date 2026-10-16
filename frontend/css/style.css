@@ -285,6 +285,8 @@ input {
   text-decoration: underline;
 }
 
+
+input[type="text"],
 input[type="tel"],
 input[type="password"] {
   width: 100%;
@@ -297,6 +299,7 @@ input[type="password"] {
   outline: none;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
+
 
 input::placeholder {
   color: rgba(79, 97, 117, 0.75);
