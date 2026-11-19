@@ -34,10 +34,6 @@
                     <span>◈</span> Services
                 </a>
 
-                <a href="#requests" class="menu-item">
-                    <span>▤</span> My Requests
-                </a>
-
                 <a href="#complaints" class="menu-item">
                     <span>◉</span> Complaints
                 </a>
@@ -103,16 +99,17 @@
                 </div>
 
                 <div class="stats-grid">
+
                     <div class="stat-card">
-                        <div class="stat-icon blue">▤</div>
-                        <p>Total Requests</p>
-                        <h2 id="totalRequests">0</h2>
+                        <div class="stat-icon blue">◉</div>
+                        <p>Total Complaints</p>
+                        <h2 id="totalComplaints">0</h2>
                     </div>
 
                     <div class="stat-card">
                         <div class="stat-icon orange">◷</div>
-                        <p>Pending Requests</p>
-                        <h2 id="pendingRequests">0</h2>
+                        <p>Pending Complaints</p>
+                        <h2 id="pendingComplaints">0</h2>
                     </div>
 
                     <div class="stat-card">
@@ -126,6 +123,7 @@
                         <p>Active Complaints</p>
                         <h2 id="activeComplaints">0</h2>
                     </div>
+
                 </div>
             </section>
 
@@ -155,8 +153,8 @@
             </section>
 
 
-
-            <!-- Requests -->
+            
+            <!-- Requests 
             <section id="requests" class="dashboard-section">
                 <div class="section-heading">
                     <div>
@@ -171,22 +169,90 @@
                     <p>Your submitted service requests will appear here.</p>
                 </div>
             </section>
+            -->
 
 
             <!-- Complaints -->
             <section id="complaints" class="dashboard-section">
+
                 <div class="section-heading">
                     <div>
                         <h2>My Complaints</h2>
-                        <p>View and track your complaints.</p>
+                        <p>Submit a complaint and track its progress.</p>
                     </div>
                 </div>
 
-                <div class="placeholder-card">
-                    <div class="placeholder-icon">◉</div>
-                    <h3>No complaints to display</h3>
-                    <p>Your submitted complaints will appear here.</p>
+                <!-- Submit Complaint Form -->
+                <div class="complaint-form-card">
+                    <h3>Submit a New Complaint</h3>
+                    <p class="form-description">
+                        Describe the issue you are experiencing with your NTC service.
+                    </p>
+
+                    <form id="complaintForm">
+
+                        <div class="form-group">
+                            <label for="complaintCategory">Complaint Category</label>
+                            <select id="complaintCategory" required>
+                                <option value="">Select a category</option>
+                                <option value="Network">Network Issue</option>
+                                <option value="Internet">Internet Issue</option>
+                                <option value="Billing">Billing Issue</option>
+                                <option value="Recharge">Recharge Issue</option>
+                                <option value="SIM">SIM Issue</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="complaintSubject">Subject</label>
+                            <input
+                                type="text"
+                                id="complaintSubject"
+                                placeholder="Enter complaint subject"
+                                maxlength="120"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="complaintDescription">Description</label>
+                            <textarea
+                                id="complaintDescription"
+                                placeholder="Explain your issue in detail..."
+                                rows="5"
+                                maxlength="2000"
+                                required
+                            ></textarea>
+                        </div>
+
+                        <p id="complaintMessage" class="complaint-message"></p>
+
+                        <button type="submit" id="submitComplaintBtn" class="complaint-submit-btn">
+                            Submit Complaint
+                        </button>
+
+                    </form>
                 </div>
+
+                <!-- Complaint History -->
+                <div class="complaint-history">
+
+                    <div class="section-heading">
+                        <div>
+                            <h2>Complaint History</h2>
+                            <p>View the complaints you have submitted.</p>
+                        </div>
+                    </div>
+
+                    <div id="complaintsList">
+                        <div class="placeholder-card">
+                            <p>Loading complaints...</p>
+                        </div>
+                    </div>
+
+                </div>
+
             </section>
 
 
