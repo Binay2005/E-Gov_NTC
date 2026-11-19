@@ -1,5 +1,6 @@
 import express from "express";
 import userRouter from "./routes/user.route.js";
+import serviceRouter from "./routes/service.route.js";
 import mongoose from "mongoose";
 import path from "path";
 import {fileURLToPath} from "url";
@@ -23,6 +24,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api/auth", userRouter);
+app.use("/api/services", serviceRouter);
 
 app.listen(3001, () => {
     console.log("Server is running on port 3001");
