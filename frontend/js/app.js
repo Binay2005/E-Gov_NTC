@@ -94,7 +94,9 @@ if (loginForm && phoneInput && passwordInput && loginButton && formMessage) {
         true
       );
 
-      // Redirect after successful login once the dashboard is ready:
+      setTimeout(() => {
+        window.location.href = "/pages/dashboard.html";
+      }, 1500);
       // window.location.href = "/pages/dashboard.html";
     } catch (error) {
       showMessage(

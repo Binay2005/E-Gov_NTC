@@ -1,0 +1,224 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NTC | Customer Dashboard</title>
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="dashboard-container">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="brand-logo">NT</div>
+                <div>
+                    <h2>Nepal Telecom</h2>
+                    <span>CONNECTED NEPAL</span>
+                </div>
+            </div>
+
+            <div class="sidebar-menu">
+                <p class="menu-heading">MAIN MENU</p>
+
+                <a href="#overview" class="menu-item active">
+                    <span>▦</span> Dashboard
+                </a>
+
+                <a href="#services" class="menu-item">
+                    <span>◈</span> Services
+                </a>
+
+                <a href="#requests" class="menu-item">
+                    <span>▤</span> My Requests
+                </a>
+
+                <a href="#complaints" class="menu-item">
+                    <span>◉</span> Complaints
+                </a>
+
+                <p class="menu-heading account-heading">ACCOUNT</p>
+
+                <a href="#profile" class="menu-item">
+                    <span>♙</span> My Profile
+                </a>
+            </div>
+
+            <div class="sidebar-bottom">
+                <div class="help-box">
+                    <h4>Need assistance?</h4>
+                    <p>Contact Nepal Telecom support for help.</p>
+                    <a href="https://www.ntc.net.np/" target="_blank">
+                        Visit NTC Website →
+                    </a>
+                </div>
+
+                <button id="logoutBtn" class="logout-btn">
+                    ↪ &nbsp; Logout
+                </button>
+            </div>
+        </aside>
+
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <header class="topbar">
+                <div>
+                    <h1>Dashboard</h1>
+                    <p>Welcome to your Nepal Telecom account.</p>
+                </div>
+
+                <div class="user-info">
+                    <div class="user-avatar" id="userAvatar">U</div>
+                    <div>
+                        <h4 id="userName">Loading...</h4>
+                        <span>Customer</span>
+                    </div>
+                </div>
+            </header>
+
+
+            <!-- Overview -->
+            <section id="overview">
+                <div class="welcome-banner">
+                    <div>
+                        <p>NEPAL TELECOM CUSTOMER PORTAL</p>
+                        <h2>Welcome back, <span id="welcomeName">User</span>!</h2>
+                        <p>Manage your telecom services and requests from one place.</p>
+                    </div>
+                    <div class="banner-icon">📱</div>
+                </div>
+
+                <div class="section-heading">
+                    <div>
+                        <h2>Overview</h2>
+                        <p>Here's a summary of your account activity.</p>
+                    </div>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon blue">▤</div>
+                        <p>Total Requests</p>
+                        <h2 id="totalRequests">0</h2>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon orange">◷</div>
+                        <p>Pending Requests</p>
+                        <h2 id="pendingRequests">0</h2>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon green">✓</div>
+                        <p>Resolved Complaints</p>
+                        <h2 id="resolvedComplaints">0</h2>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon red">!</div>
+                        <p>Active Complaints</p>
+                        <h2 id="activeComplaints">0</h2>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- Services -->
+            <section id="services" class="dashboard-section">
+                <div class="section-heading">
+                    <div>
+                        <h2>Our Services</h2>
+                        <p>Explore Nepal Telecom services.</p>
+                    </div>
+                </div>
+
+                <div class="placeholder-card">
+                    <div class="placeholder-icon">◈</div>
+                    <h3>Telecom Services</h3>
+                    <p>Available services and service applications will appear here.</p>
+                </div>
+            </section>
+
+
+            <!-- Requests -->
+            <section id="requests" class="dashboard-section">
+                <div class="section-heading">
+                    <div>
+                        <h2>My Service Requests</h2>
+                        <p>Track the progress of your service applications.</p>
+                    </div>
+                </div>
+
+                <div class="placeholder-card">
+                    <div class="placeholder-icon">▤</div>
+                    <h3>No requests to display</h3>
+                    <p>Your submitted service requests will appear here.</p>
+                </div>
+            </section>
+
+
+            <!-- Complaints -->
+            <section id="complaints" class="dashboard-section">
+                <div class="section-heading">
+                    <div>
+                        <h2>My Complaints</h2>
+                        <p>View and track your complaints.</p>
+                    </div>
+                </div>
+
+                <div class="placeholder-card">
+                    <div class="placeholder-icon">◉</div>
+                    <h3>No complaints to display</h3>
+                    <p>Your submitted complaints will appear here.</p>
+                </div>
+            </section>
+
+
+            <!-- Profile -->
+            <section id="profile" class="dashboard-section">
+                <div class="section-heading">
+                    <div>
+                        <h2>My Profile</h2>
+                        <p>Your registered account information.</p>
+                    </div>
+                </div>
+
+                <div class="profile-card">
+                    <div class="profile-avatar" id="profileAvatar">U</div>
+
+                    <div class="profile-details">
+                        <div>
+                            <label>Full Name</label>
+                            <h4 id="profileName">Loading...</h4>
+                        </div>
+
+                        <div>
+                            <label>Mobile Number</label>
+                            <h4 id="profilePhone">Loading...</h4>
+                        </div>
+
+                        <div>
+                            <label>Account Type</label>
+                            <h4>Customer</h4>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer>
+                © 2026 Nepal Telecom. All rights reserved.
+            </footer>
+
+        </main>
+    </div>
+
+    <script src="../js/dashboard.js"></script>
+</body>
+</html>
