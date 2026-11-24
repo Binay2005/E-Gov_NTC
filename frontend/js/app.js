@@ -95,7 +95,11 @@ if (loginForm && phoneInput && passwordInput && loginButton && formMessage) {
       );
 
       setTimeout(() => {
-        window.location.href = "/pages/dashboard.html";
+        if (result.user.isAdmin) {
+            window.location.href = "./admin-dashboard.html";
+        } else {
+            window.location.href = "./dashboard.html";
+        }
       }, 1500);
       // window.location.href = "/pages/dashboard.html";
     } catch (error) {

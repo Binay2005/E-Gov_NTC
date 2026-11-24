@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NTC | Admin Dashboard</title>
+    <link rel="stylesheet" href="../css/admin-dashboard.css">
+</head>
+<body>
+    <div class="admin-layout">
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="brand-logo">NT</div>
+                <div>
+                    <h2>Nepal Telecom</h2>
+                    <p>Admin Portal</p>
+                </div>
+            </div>
+
+            <nav>
+                <a class="nav-link active" href="#overview">Overview</a>
+                <a class="nav-link" href="#complaints">Complaints</a>
+            </nav>
+
+            <button id="logoutBtn" class="logout-btn" type="button">
+                Log out
+            </button>
+        </aside>
+
+        <main class="main-content">
+            <header class="page-header">
+                <div>
+                    <p class="eyebrow">ADMINISTRATION</p>
+                    <h1>Admin Dashboard</h1>
+                    <p>Welcome, <span id="adminName">Admin</span>.</p>
+                </div>
+            </header>
+
+            <section id="overview">
+                <div class="stats-grid">
+                    <article class="stat-card">
+                        <p>Total Complaints</p>
+                        <h2 id="totalComplaints">0</h2>
+                    </article>
+                    <article class="stat-card">
+                        <p>Pending</p>
+                        <h2 id="pendingComplaints">0</h2>
+                    </article>
+                    <article class="stat-card">
+                        <p>In Progress</p>
+                        <h2 id="inProgressComplaints">0</h2>
+                    </article>
+                    <article class="stat-card">
+                        <p>Resolved</p>
+                        <h2 id="resolvedComplaints">0</h2>
+                    </article>
+                </div>
+            </section>
+
+            <section id="complaints" class="complaints-section">
+                <div class="section-heading">
+                    <div>
+                        <h2>Complaint Management</h2>
+                        <p>Review customer complaints and update their status.</p>
+                    </div>
+
+                    <select id="statusFilter" aria-label="Filter complaints by status">
+                        <option value="All">All statuses</option>
+                        <option value="Pending">Pending</option>
+                        <option value="In Progress">In Progress</option>
+                        <option value="Resolved">Resolved</option>
+                        <option value="Rejected">Rejected</option>
+                    </select>
+                </div>
+
+                <p id="complaintsMessage" class="message" aria-live="polite"></p>
+                <div id="complaintsList" class="complaints-list">
+                    <p>Loading complaints...</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="../js/admin-dashboard.js"></script>
+</body>
+</html>
